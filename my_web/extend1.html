@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+body {font-family: "Lato", sans-serif;}
+
+
+
+
+
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+.sidebar a {
+  padding: 25px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  color: #98ca18;
+}
+
+.sidebar a:active {
+  color: #b7ff00;
+}
+
+
+.mainbar {
+  height: 100%;
+  width: 90%;
+  position: fixed;
+  z-index: 3;
+  top: -15px;
+  left: 160px;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 16px;
+  margin: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mainbar a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  
+}
+
+.mainbar a:hover {
+  color: green;
+}
+
+.mainbar b {
+  border: none;
+  background-color: inherit;
+  padding: 10px;
+  font-size: 14px;
+  display: inline-block;
+  
+  
+ }
+.mainbar b:hover {
+  background: #eee;
+  cursor: pointer;
+  
+}
+
+
+.mainbar c {
+  padding: 0px 4px 0px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  
+}
+
+
+.mainbar d {
+  padding: 0px 4px 0px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: inline-block;
+  
+}
+
+.mainbar d:hover {
+  color: green;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+  
+@media screen and (max-width: 450px) {
+  .topbar {padding-top: 15px;}
+  .topbar a {font-size: 18px;}
+  
+}
+
+</style>
+</head>
+<body>
+
+<img style="display:none;" id="bigpic" />
+
+<div class="sidebar">
+  <a onclick="openPage('Home')" id="Default" target="iframe_a"><i class="fa fa-fw fa-home fa-fw"></i> Home</a>
+  <a onclick="openPage('Document')"><i class="fa fa-file fa-fw"></i> Document</a>
+  <a onclick="openPage('projects')"><i class="fa fa-fw fa-trash fa-fw"></i> My Projects</a>
+  <a onclick="openPage('Games')"><i class="fa fa-share-square-o fa-fw"></i> Connect</a>
+  <a onclick="openPage('Trash')"><i class="fa fa-fw fa-trash fa-fw"></i> Trash</a>
+</div>
+
+
+
+
+<!-- Home Folder -->
+<div class="mainbar" id="Home">
+<c><d onclick="openPage('Home')"><p>Home </p></d>
+
+</c>
+
+<b><button onclick="openPage('Document')"><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Document</p></button></b>
+
+<b><button onclick="openPage('Downloads')" ><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Downloads</p></button></b>
+
+</div>
+     
+
+<!-- Downloads Folder -->
+<div class="mainbar" id="Downloads">
+<c>
+  <d class="fa fa-arrow-left" onclick="openPage('Home')" ></d>
+  <d onclick="openPage('Home')" ><p>Home </p></d>
+  <d><p>/ </p></d>
+  <d onclick="openPage('Downloads')"><p>Downloads </p></d>
+</c>
+
+<b ><button onclick="showPicture('./images/PC.png')" style="cursor: pointer;"><i > <img src="./images/PC.png" 
+class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+<p>PC.png</p></button></b>
+
+</div>
+     
+     
+     
+     
+     
+     
+     
+<!-- Document Folder -->     
+     
+<div class="mainbar" id="Document">
+<c><d onclick="openPage('Home')" ><p>Home </p></d>
+<d><p>/ </p></d>
+<d onclick="openPage('Document')" ><p>Document </p></d>
+</c>
+<b><button onclick="openPage('Books')" ><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Books</p></button></b>
+
+<b><button onclick=""><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Notes</p></button></b>
+
+<b><button onclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>Movies</p></button></b>
+
+</div>
+
+
+<!-- Books Folder -->
+<div class="mainbar" id="Books">
+  <c>
+  <d class="fa fa-arrow-left" onclick="openPage('Document')" ></d>
+  <d onclick="openPage('Document')" ><p>Document </p></d>
+  <d><p>/ </p></d>
+  <d onclick="openPage('Books')"><p>Books </p></d>
+  </c>
+  
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/Ghost%20in%20the%20Wires.pdf','_blank')"  style="cursor: pointer;"><i > <img src="./images/Books/1_ghost_on_the_wire.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Ghost in<br>the Wires</p></button></b>
+
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/167%20-%20The%20Basics%20Of%20Hacking%20And%20Penetration%20Testing%20%20Ethical%20Hacking%20And%20Penetration%20Testing%20Made%20Easy%20%5B-PUNISHER-%5D.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/2_the_basic_of_penetration_testing.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>The Basics of<br>Hacking and<br>Penetration Testing</p></button></b>
+  
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/Black%2520Hat%2520Python.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/3_black_hat_python.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Black Hat<br>Python</p></button></b>
+  
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/Blue%20Team%20Field%20Manual.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/4_BTFM.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Blue Team<br>Field Manual</p></button></b>
+
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/RTFM%20-%20Red%20Team%20Field%20Manual%20v3.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/5_RTFM.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Red Team<br>Field Manual</p></button></b>
+
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/Hacking-%20The%20Art%20of%20Exploitation%20(2nd%20ed.%202008)%20-%20Erickson.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/6_hacking_the_art_of_exploitation.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Hacking: The<br>Art of<br>Exploitation</p></button></b>
+
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/metasploit.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/7_metasploit.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>Metasploit</p></button></b>
+
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/The-Hacker-Playbook-Practical-Guide-To-Penetration-Testing-2014.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/8_the_hacker_play_book.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>The Hacker<br>Playbook</p></button></b>
+  
+  <b ><button onclick="window.open('https\://github.com/ramixix/Books/raw/main/Hacking_books/Social%20Engineering_%20The%20Art%20of%20Human%20Hacking%20-%20Christopher%20Hadnagy.pdf','_blank')" style="cursor: pointer;"><i > <img src="./images/Books/9_social_engineering.png" 
+  class="img-thumbnail" alt="Cinque Terre" width="50" height="50"></i>
+  <p>The Science of<br>Human Hacking</p></button></b>
+      
+  
+  </div>
+       
+
+
+
+
+<!-- Connect folder-->
+
+<div class="mainbar" id="Games">
+<c><d ><p>Connect </p></d>
+</c>
+<b><button onclick="window.open('https\://www.instagram.com/ram1n_h/','_blank')"  style="width:100px; height:124px;cursor: pointer;"><i class="fa fa-instagram" style="font-size:50px;"></i>
+<p>Instagram</p></button></b>
+
+<b><button onclick="window.open('https\://github.com/ramixix','_blank')"  style="width:100px; height:124px;cursor: pointer;"><i class="fa fa-github" style="font-size:50px;"></i>
+<p>Github</p></button></b>
+
+<b><button onclick="window.open('https\:www.linkedin.com/in/ramin-halimi','_blank')"  style="width:100px; height:124px;cursor: pointer;"><i class="fa fa-linkedin-square" style="font-size:50px;"></i>
+<p>Linkedin</p></button></b>
+
+
+</div>     
+
+
+
+
+<!-- Project folder-->
+
+<div class="mainbar" id="projects">
+<c><d ><p>Projects </p></d>
+</c>
+<b><button onclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>Videos</p></button></b>
+
+<b><button onclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>3D Models</p></button></b>
+
+</div>   
+
+
+
+
+<!-- Trash Folder -->
+<div class="mainbar" id="Trash">
+<c><d href="#home" ><p>Trash </p></d>
+</c>
+<b><button onclick="crush()" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>crush</p></button></b>
+
+</div>     
+
+
+<script>
+function openPage(pageName) {
+  var i;
+  tabcontent = document.getElementsByClassName("mainbar");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  document.getElementById(pageName).style.display = "block";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("Default").click();
+
+
+
+function crush() {
+  var password = prompt("Please enter Password:");
+  if (password == "Some_times_the_things_you_didn't_expect_might_be_the_answer") 
+  
+  
+  /* //Answer:
+  //if you are here means you want to know about my crushh right!!
+  //She is a girl with wonderful eyes and beautiful face with too much attitude
+  //Truth is I don't have a crush.
+   */
+  {
+  alert("...Finally Unlocked aha...");
+    
+  } else
+  {
+  alert("Wrong!!!\t \nRight click on crush and click inspect element \n then search for crush in script");
+  }
+}
+
+
+
+</script>
+
+<script>
+function showPicture(image_path) {
+  
+  var sourceOfPicture = image_path;
+  window.open(sourceOfPicture)  //,'_top'
+  var img = document.getElementById('bigpic')
+} 
+
+
+
+</script>
+
+
+</body>
+</html> 

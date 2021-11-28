@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramin Halimi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="VtWindow-master/vtwindow.css">
+    <link rel="stylesheet" href="VtWindow-master/vtwindow-theme.material.css">
+    <link rel="stylesheet" href="VtWindow-master/vtwindow-theme.osx.css">
+    <script src="VtWindow-master/build/vtwindow.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<body>
+    
+    <header>
+		<ul class="left">
+				<li><strong>Project</strong>
+						<div class="submenu">
+								<ul>
+                                    <li>Artificial Intelligence</li>
+                                    <li class="spacer"></li>
+                                    <li><a href="Sentiment_analysis.html" target="_blank">Sentiment Analysis</a></li>
+                                    <li class="spacer"></li>
+                                    <li><a href="deeplearninghomepage.html" target="_blank">Deep Learning</a></li>
+                                    <li class="spacer"></li>
+									<li><a href="cnn_about/cnn.html" target="_blank">Convolutional Neural Network</a></li>
+									<li class="spacer"></li>
+									<li><a href="AI_Optimization_Game.html" target="_blank">AI Optimization Game </a></li>
+                                    <li class="spacer"></li>
+                                    <li><a href="School_registration_system/index.html" target="_blank">School registration system </a></li>
+                                    <li><a href="anket.pdf" target="_blank">Future Anxiety with SPSS </a></li>
+                                   
+								</ul>
+						</div>
+				</li>
+				
+		</ul>
+		<ul class="right">
+				
+				<li><span id="clock"></span>
+						<div class="submenu">
+								<ul>
+										<li id="date" class="noChoice"></li>
+										<li class="spacer"></li>
+										
+								</ul>
+						</div>
+				</li>
+				Ramin Halimi
+                
+		</ul>
+	</header>
+	<div id="Desktop">
+        <span class="icon" data-title="&nbsp;&nbsp;&nbsp;This PC">
+            <div
+            title="This PC"
+            class="desktop-item"
+            ondblclick="$('#tab').show(); $('.desktop-item').css('background-color','transparent');"
+            onmouseover="hoveredItem(this)"
+            onmouseout="hoveredOut(this)"
+            onclick="selectedItem(this)"
+            >
+            <img src="images/PC.png" alt="This PC" />
+            </div>
+        </span>
+		<span class="icon" data-title="Image Processing"  onmouseout="hoveredOut(this)" src="extend1.html"><a onclick="return false" ondblclick="location=this.href" href="deeplearninghomepage.html" target="_blank"><img src="images/folder.png"></a></span>
+        <span class="icon" data-title="Deep Learnig"  onmouseout="hoveredOut(this)" src="extend1.html"><a onclick="return false" ondblclick="location=this.href" href="deeplearninghomepage.html" target="_blank"><img src="images/folder.png"></a></span>
+        <span class="icon" data-title="School Registration System" onmouseout="hoveredOut(this)"><a onclick="return false" ondblclick="location=this.href" href="School_registration_system/index.html" target="_blank"><img src="images/folder.png"></a></span>
+        
+
+        <!-- <span class="icon" data-title="PDF Converter"><a href="pdf_cevirici/dist/index.html" target="_blank"><img src="images/pdf.png"></a></span> -->
+		
+	</div>
+    <div id="tab" >
+        <div id="tab-header" class="tab-header">
+            This PC <i class="fa fa-times" onclick="$('#tab').hide()"></i>
+        </div> <br/>
+        
+        
+        <div class="tab-middle">
+        <iframe class="resp-iframe" src="extend1.html" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+        <div id="tab-footer">
+            9 folders, 5 files, 5.00 MBss
+        </div>
+    </div>
+
+
+	<footer>
+		<ul class="footy_wrapper">
+            <li class="footy" data-title="Project"><button onclick="clickButton('Project','being developed','400','400');"><img src="images/Anasayfa.png"></button></li>
+			<li class="footy" data-title="Python"><button onclick="clickButton('Python','being developed','400','400');"><img src="images/python.png"></button></li>
+			<li class="footy" data-title="Mail"><button onclick="clickButton('Mail','ramin.halimi@protonmail.com','400','400');"><img src="images/mail.png"></button></li>
+			<li class="footy" data-title="StackOverFlow"><a href="https://stackoverflow.com/story/ramixix" target="_blank"><img src="images/stackoverflow.png"></a></li>
+            <li class="footy" data-title="github"><a href="https://github.com/ramixix" target="_blank"><img src="images/github.png" ></a></li>
+			<li class="footy" data-title="Linkedin"><a href="https://www.linkedin.com/in/ramin-halimi" target="_blank"><img src="images/linkedin.png"></a></li>
+            <li class="footy" data-title="fullscreen"><button onclick="toggleFullScreen();"><img src="images/fullscreen.png"></button></li>
+            
+		</ul>
+	</footer>
+	<template id="m">
+        <div role="dialog" aria-label="" class="vt-window-material">
+            <div name="header" class="valign-wrapper indigo">
+                <span name="title">${content.title}</span>
+                <span name="controls">
+                    <button name="popout" class="btn-flat" title="Deattatch"><i class="material-icons">launch</i></button>
+                    <button name="minimize" class="btn-flat" title="Minimize"><i class="material-icons">remove</i></button>
+                    <button name="maximize" class="btn-flat" title="Maximize"><i class="material-icons">zoom_out_map</i></button>
+                    <button name="close" class="btn-flat" title="Close"><i class="material-icons">close</i></button>
+                </span>
+            </div>
+            <div name="body">
+                ${content.body}
+                <input type="text">
+            </div>
+            <div name="footer">
+                <div name="grab"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="osx">
+        <div role="dialog" aria-label="" class="vt-window-osx">
+            <div name="header" class="">
+                <span name="title">${content.title}</span>
+                <span name="controls">
+                    <button name="close" class="" title="Close"></button>
+                    <button name="maximize" class="" title="Maximize"></button>
+                    <button name="minimize" class="" title="Minimize"></button>
+                    <button name="popout" class="" title="Deattatch"></button>
+                </span>
+            </div>
+            <div name="body">
+                ${content.body}
+                <input type="text">
+            </div>
+            <div name="footer">
+                <div name="grab"></div>
+            </div>
+        </div>
+    </template>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+	var x = 50;
+	var y = 50;
+	var clickButton = (title,body,w,h) => {
+		console.log(x + " - " + y);
+		x = x + 30;
+		y = y + 30;
+		var w1 = new VtWindow(null, { template: osx.innerHTML, resizable: true, maximizable: true });
+		w1.setTitle(title);
+		w1.setBody(body);
+		w1.top = x;
+		w1.left = y;
+		w1.width = w;
+		w1.height = h;
+		w1.mount();
+		w1.focus();
+	}
+    </script>
+</body>
+</html>
