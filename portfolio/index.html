@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- style switcher -->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 
-<body>
+<body class="dark">
     <div class="main-container">
         
         <!-- Aside Section -->
@@ -26,23 +33,23 @@
                 </span>
             </div>
              <ul class="nav">
-                <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#"><i class="fa fa-list"></i>Projects</a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="https://github.com/ramixix" target="_blank"><i class="fa fa-list"></i>Projects</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
              </ul>
         </div>
 
         <!-- Main Section -->
         <div class="main-content">
-            <section class="home section">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hello, my name is <span class="name">Ramin</span></h3>
                             <h3 class="my-profession">I am a <span class="typing">Software Developer</span></h3>
-                            <p>loerem asdf asd fasdf sda sdf em asdf asd fasdf sda sdf em asdf asd fasdf sda sdf em asdf asd fasdf sda sdf em asdf asd fasdf sda sdf </p>
+                            <p>As a recent graduate of Computer Engineering with 8 months of experience in reverse engineering and malware analysis, I possess a strong understanding of how computers and low-level software operate. I have a solid foundation in software development and knowledge in cyber security, networking, and penetration testing fields. Additionally, I have worked as a cyber security researcher and am well-versed in the latest industry trends and technologies. With exceptional communication skills and a willingness to learn, I am enthusiastic about contributing to a dynamic team. 
+                            <br>I am so dedicated to improving my skills that I am willing to work for free to gain additional training and experience in any area that may benefit me and my future employer.</p>
                             <a href="#contact" class="btn hire-me">Hire Me</a>
                         </div>
                         <div class="home-img padd-15">
@@ -53,7 +60,7 @@
             </section>
 
             <!-- About Section -->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -64,24 +71,26 @@
                         <div class="about-content padd-15">
                             <div class="row">
                                 <div class="about-text padd-15">
-                                    <h3>I am Ramin and I'm <span>Software Developer</span></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus vestibulum sed arcu non odio euismod lacinia at. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Ornare arcu odio ut sem nulla pharetra diam sit amet. Ullamcorper morbi tincidunt ornare massa. Ac orci phasellus egestas tellus rutrum tellus. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mus mauris vitae ultricies leo. Nisi porta lorem mollis aliquam ut. Auctor augue mauris augue neque gravida in fermentum et. Mauris vitae ultricies leo integer. At quis risus sed vulputate odio. Gravida quis blandit turpis cursus.</p>
+                                    <h3>I am Ramin <span>, And</span></h3>
+                                    <p>Since a young age, I have been in love with computers and fascinated by technology. Pursuing a computer-related career was always my dream, and I have been fortunate to realize this dream by becoming a computer engineering graduate. My 8 months of experience in reverse engineering and malware analysis have given me a strong understanding of low-level software and software development, while my knowledge in cyber security, networking, and penetration testing has kept me up-to-date with the latest industry trends and technologies. As a cyber security researcher, I am passionate about approaching technical challenges with a unique perspective.
+                                    <br>
+                                    When I'm not working, I enjoy playing the guitar as a hobby and learning new languages. I believe in the power of continuous learning and thrive on being challenged to learn more. I am excited to bring my skills and enthusiasm to a dynamic team where I can grow both personally and professionally."</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="personal-info padd-15">
                                     <div class="row">
                                         <div class="info-item padd-15">
-                                            <p>Linkedin : <span>www.linkedin.com/info</span></p>
+                                            <p>Linkedin : <span><a href="http://www.linkedin.com/in/ramin-halimi" target="_blank">http://www.linkedin.com/in/ramin-halimi</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>github : <span>www.github.com</span></p>
+                                            <p>Github : <span><a href="https://github.com/ramixix" target="_blank">https://github.com/ramixix</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>website : <span>www.info.com</span></p>
+                                            <p>Website : <span><a href="https://ramixix.github.io/my_website/" target="_blank">https://ramixix.github.io/my_website/</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>email : <span>info@gmail.com</span></p>
+                                            <p>Email : <span><a href="#">ramin.halimi@protonmail.com</a></span></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -97,29 +106,64 @@
                                         <div class="skill-item padd-15">
                                             <h5>C</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width:85%;"></div>
-                                                <div class="skill-percent">85%</div>
+                                                <div class="progress-in" style="width:90%;"></div>
+                                                <!-- <div class="skill-percent">85%</div> -->
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>C++</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width:85%;"></div>
-                                                <div class="skill-percent">85%</div>
+                                                <!-- <div class="skill-percent">85%</div> -->
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>Python</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width:88%;"></div>
-                                                <div class="skill-percent">88%</div>
+                                                <!-- <div class="skill-percent">88%</div> -->
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>Bash</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width:87%;"></div>
-                                                <div class="skill-percent">87%</div>
+                                                <!-- <div class="skill-percent">87%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Linux</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width:92%;"></div>
+                                                <!-- <div class="skill-percent">87%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Git</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width:87%;"></div>
+                                                <!-- <div class="skill-percent">87%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>HTML/CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width:87%;"></div>
+                                                <!-- <div class="skill-percent">87%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Reverse Engineering</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width:82%;"></div>
+                                                <!-- <div class="skill-percent">87%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Javascript</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width:45%;"></div>
+                                                <!-- <div class="skill-percent">87%</div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -137,8 +181,8 @@
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> 2018 - 2022
                                                     </h3>
-                                                    <h4 class="timeline-title">Bachelor of Science</h4>
-                                                    <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed d</p>
+                                                    <h4 class="timeline-title">Bachelor of Science in Computer Engineering</h4>
+                                                    <p class="timeline-text">I studied computer engineering from 2018 to 2022 and earned a Bachelor of Science degree from KTU. During my four years of study, I was an active member of the Cyber Security Club and Engineering Club. Graduated with a good GPA of 3.3/4 and completed coursework in various computer engineering topics. These courses helped me to gain a solid foundation in the field and develop a deep understanding of topics such as software development, low-level software, cyber security, and networking. My university experience has prepared me well for a career in the computer engineering field.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,10 +197,10 @@
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2018 - 2022
+                                                        <i class="fa fa-calendar"></i> 2022 - 2023
                                                     </h3>
-                                                    <h4 class="timeline-title">Bachelor of Science</h4>
-                                                    <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed d</p>
+                                                    <h4 class="timeline-title">Malware Analysis</h4>
+                                                    <p class="timeline-text">I worked as a Malware Analyst at Brandefense Company for almost a year. During my time there, I gained extensive experience in analyzing and reverse engineering malware to understand its behavior. In addition, I developed a deep understanding of the nature of ransomware attacks and the various techniques used by threat actors. Beside Malware analysis I was  responsible for gathering information about ransomware attacks and monitoring events on the dark web. This involved collecting information about ransomware groups and attacks and generating monthly and annual reports. My work as a Malware Analyst at Brandefense Company allowed me to develop my skills in cyber security and malware analysis, and I am excited to apply these skills to future challenges in the field.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,12 +211,105 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Contact Section -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have You Any Questions?</h3>
+                    <h4 class="contact-sub-title padd-15">I'm At Your Service</h4>
+                    <div class="row">
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>Call Me On</h4>
+                            <p>+*********</p>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <h4>Location</h4>
+                            <p>On Earth</p>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p>ramin.halimi@protonmail.com</p>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                            <h4>Website</h4>
+                            <p>https://ramixix.github.io/my_website/</p>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Send Me An Email (Not Working If you need to contact me, contact me normally by mail using available information.)</h3>
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
     </div>
 
+    <!-- Style Switcher -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
     <!-- Javascript files import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
 </body>
 
 </html>
